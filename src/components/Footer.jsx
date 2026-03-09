@@ -32,7 +32,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Vanshika Design. All rights
+          &copy; {new Date().getFullYear()} Abemelek Design. All rights
           reserved.
         </p>
       </div>

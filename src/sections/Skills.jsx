@@ -5,18 +5,15 @@ import Card from '../components/Card';
 const skills = [
   {
     category: 'Core Skills',
-    items: [
-      'UI/UX layout',
-      'Frontend Dev',
-      'Responsive Web Design',
-      'Component-Based Design',
-    ],
+    items: ['UI/UX Design', 'Responsive Web Design', 'Component-Based Design'],
   },
-  { category: 'Frontend Tech', items: ['HTML', 'CSS', 'JS', 'WordPress'] },
-  { category: 'Design Tools', items: ['Figma', 'Photoshop', 'Illustrator'] },
+  {
+    category: 'Frontend Tech',
+    items: ['HTML', 'CSS', 'Tailwind CSS', 'JS', 'ES6', 'React'],
+  },
   {
     category: 'Tools & Interaction',
-    items: ['GitHub', 'Netlify', 'GSAP', 'UI Interactions'],
+    items: ['Figma', 'Photoshop', 'Illustrator', 'Git & GitHub'],
   },
 ];
 
@@ -27,7 +24,7 @@ const Skills = () => {
       <p className="text-gray-400 text-center mb-12">
         Crafting seamless UI/UX and clean code
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((skill, index) => (
           <Card
             key={index}

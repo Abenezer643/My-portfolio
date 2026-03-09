@@ -4,40 +4,34 @@ import Card from '../components/Card';
 
 const services = [
   {
-    title: 'UI/UX Website Design',
+    title: 'Design Engineering ',
     description:
-      'Clean, user-focused layouts with clear structure, smooth navigation, and strong visual hierarchy.',
+      'Translating design files into pixel-perfect, interactive code with attention to detail and performance.',
     tags: ['Modern layouts', 'Responsive design'],
   },
   {
-    title: 'Frontend Development',
+    title: 'Scalable Frontend',
     description:
-      'Responsive interfaces using HTML, CSS, and JavaScript for clean, consistent, reliable performance.',
-    tags: ['Clean HTML/CSS', 'Smooth interactions'],
+      'Building component-based architectures that grow with your product, ensuring maintainability and consistency.',
+    tags: ['Component design', 'State management'],
   },
   {
     title: 'Performance & Responsiveness',
     description:
-      'Fast, mobile-first websites optimized for speed, accessibility, and dependable performance.',
+      'Ensuring silky smooth 60fps animations and lightning-fast load times.',
     tags: ['Speed optimization', 'Asset efficiency'],
-  },
-  {
-    title: 'WordPress Implementation',
-    description:
-      'Lightweight WordPress setups with easy updates, fast loading, and scalable, clean, customizable layouts.',
-    tags: ['Theme setup', 'Easy management'],
   },
 ];
 
 const Services = () => {
   return (
     <SectionWrapper id="services" className="py-20">
-      <h2 className="text-4xl font-bold text-center mb-4">Services</h2>
+      <h2 className="text-4xl font-bold text-center mb-4">What I Do</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
         Designing clean scalable responsive websites
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <Card
             key={index}

@@ -16,12 +16,14 @@ const approaches = [
 const About = () => {
   return (
     <SectionWrapper id="about" className="py-20 text-center">
-      <h2 className="text-4xl font-bold mb-4">About Me</h2>
+      <h2 className="text-4xl font-bold mb-4">Who I Am</h2>
       <p className="text-gray-400 max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
-        I'm a front-end developer and designer passionate about crafting clean,
-        intuitive, and responsive digital experiences. I focus on turning ideas
-        into seamless interfaces by understanding user needs, designing
-        thoughtful UI layouts, and ensuring smooth interactions across devices.
+        I'm Abemelek Dereje, an Information System student at [Haramaya
+        University] and a front-end developer and designer passionate about
+        crafting clean, intuitive, and responsive digital experiences. I focus
+        on turning ideas into seamless interfaces by understanding user needs,
+        designing thoughtful UI layouts, and ensuring smooth interactions across
+        devices.
       </p>
 
       <h3 className="text-2xl font-bold mb-8">My Approach</h3>
