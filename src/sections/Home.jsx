@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
-import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
+import { FaGithub, FaBehance, FaFileAlt } from 'react-icons/fa';
+import resumeFile from '../assets/resume.pdf';
 
 const Home = () => {
   return (
@@ -33,7 +34,8 @@ const Home = () => {
             View My Work
           </a>
           <a
-            href="/resume.pdf"
+            href={resumeFile}
+            download="resume.pdf"
             className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 hover:border-white/30 transition-all text-white"
           >
             <FaFileAlt />
@@ -41,13 +43,17 @@ const Home = () => {
           </a>
           <div className="flex gap-6 text-2xl text-white">
             <a
-              href="#"
+              href="https://www.behance.net/mlkdrj"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-gray-400 transition-colors transform hover:scale-110"
             >
-              <FaLinkedin />
+              <FaBehance />
             </a>
             <a
-              href="#"
+              href="https://github.com/melekdereje"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-gray-400 transition-colors transform hover:scale-110"
             >
               <FaGithub />

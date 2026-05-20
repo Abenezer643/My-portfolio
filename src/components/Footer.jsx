@@ -1,5 +1,10 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaBehance,
+  FaTelegramPlane,
+  FaInstagram,
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -7,25 +12,33 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 text-center">
         <div className="flex justify-center gap-8 mb-8">
           <a
-            href="#"
+            href="https://github.com/melekdereje"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
             <FaGithub />
           </a>
           <a
-            href="#"
+            href="https://www.behance.net/mlkdrj"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
-            <FaLinkedin />
+            <FaBehance />
           </a>
           <a
-            href="#"
+            href="https://t.me/Abe_Melek"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
-            <FaTwitter />
+            <FaTelegramPlane />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/melekdereje"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
             <FaInstagram />
