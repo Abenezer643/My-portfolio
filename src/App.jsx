@@ -4,6 +4,7 @@ import Home from './sections/Home';
 import Services from './sections/Services';
 import About from './sections/About';
 import Skills from './sections/Skills';
+import Contact from './sections/Contact';
 // import Projects from './sections/Projects';
 import Footer from './components/Footer';
 
@@ -17,6 +18,7 @@ function App() {
         <About />
         <Skills />
         {/* <Projects /> */}
+        <Contact />
       </main>
       <Footer />
     </div>
