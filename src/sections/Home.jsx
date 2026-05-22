@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import { FaGithub, FaBehance, FaFileAlt } from 'react-icons/fa';
-import resumeFile from '../assets/resume.pdf';
 
 const Home = () => {
   return (
@@ -34,8 +33,9 @@ const Home = () => {
             View My Work
           </a>
           <a
-            href={resumeFile}
-            download="resume.pdf"
+            href="https://drive.google.com/file/d/1016Gn-8_o5j0dQKO5d3NoBnfwz4-0Vzp/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 hover:border-white/30 transition-all text-white"
           >
             <FaFileAlt />
