@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import { FaGithub, FaBehance, FaFileAlt } from 'react-icons/fa';
+import profileImg from '../assets/profile.jpg';
+import resumePdf from '../assets/Resume.pdf';
 
 const Home = () => {
   return (
@@ -33,7 +35,7 @@ const Home = () => {
             View My Work
           </a>
           <a
-            href="https://drive.google.com/file/d/1016Gn-8_o5j0dQKO5d3NoBnfwz4-0Vzp/view?usp=sharing"
+            href={resumePdf}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 hover:border-white/30 transition-all text-white"
@@ -66,7 +68,7 @@ const Home = () => {
         <div className="relative w-72 h-72 md:w-[400px] md:h-[500px] rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 group">
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
           <img
-            src="./src/assets/profile.jpg"
+            src={profileImg}
             alt="Profile"
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
           />
