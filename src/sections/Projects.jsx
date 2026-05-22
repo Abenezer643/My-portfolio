@@ -11,7 +11,8 @@ const projects = [
     tags: ['React', 'Tailwind', 'Framer Motion'],
     image:
       'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop',
-    github: '#',
+    github:
+      'https://github.com/melekdereje/Arik-simplified-dark-themed-react-portfolio',
     demo: '#',
   },
   {
