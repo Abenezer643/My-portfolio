@@ -1,8 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 
 const Contact = () => {
+  const [result, setResult] = useState('');
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult('Sending...');
+    const formData = new FormData(event.target);
+
+    formData.append('access_key', 'fb4ef69f-150c-40e6-8ca1-6a606f37500c');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult('Message Sent Successfully!');
+        event.target.reset();
+      } else {
+        console.log('Error', data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      setResult('An error occurred. Please try again later.');
+    }
+
+    // Clear message after 3 seconds
+    setTimeout(() => {
+      setResult('');
+    }, 3000);
+  };
+
   return (
     <SectionWrapper id="contact" className="py-20">
       <div className="text-center mb-12">
@@ -61,7 +95,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="flex-[1.5]">
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={onSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm text-gray-400">
@@ -70,6 +104,8 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  required
                   className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
                   placeholder="John Doe"
                 />
@@ -81,6 +117,8 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
                   placeholder="john@example.com"
                 />
@@ -93,18 +131,25 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
+                required
                 rows="5"
                 className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors resize-none"
                 placeholder="Let's build something amazing together..."
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="w-full md:w-auto bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-white/10"
-            >
-              Send Message
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                type="submit"
+                className="w-full md:w-auto bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-white/10"
+              >
+                Send Message
+              </button>
+              {result && (
+                <span className="text-sm text-gray-300">{result}</span>
+              )}
+            </div>
           </form>
         </div>
       </div>
