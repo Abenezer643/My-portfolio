@@ -2,6 +2,9 @@ import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import Card from '../components/Card';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import ProjectImg from '../assets/projectPic/library-system.png';
+import ProjectImg2 from '../assets/projectPic/portfolio.png';
+import ProjectImg3 from '../assets/projectPic/Harar-travel-agency.png';
 
 const projects = [
   {
@@ -9,31 +12,29 @@ const projects = [
     description:
       'A modern dark-themed portfolio website built with React and Tailwind CSS.',
     tags: ['React', 'Tailwind', 'Framer Motion'],
-    image:
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop',
+    image: ProjectImg2,
     github:
       'https://github.com/melekdereje/Arik-simplified-dark-themed-react-portfolio',
     demo: '#',
   },
   {
-    title: 'E-Commerce Dashboard',
+    title: 'Library Management System',
     description:
-      'A comprehensive dashboard for managing products, orders, and analytics.',
-    tags: ['Next.js', 'Chart.js', 'Supabase'],
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop',
-    github: '#',
+      'A comprehensive dashboard for managing books, members, and transactions.',
+    tags: ['JavaScript', 'PHP', 'MYSQL'],
+    image: ProjectImg,
+    github: 'https://github.com/melekdereje/library-system.git',
     demo: '#',
   },
   {
-    title: 'Travel Agency App',
+    title: 'Harar Travel Agency Web',
     description:
       'Mobile-first travel booking application with map integration.',
-    tags: ['React Native', 'Google Maps API'],
-    image:
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000&auto=format&fit=crop',
-    github: '#',
-    demo: '#',
+    tags: ['TypeScript', 'Framer Motion', 'Tailwind CSS'],
+    image: ProjectImg3,
+    github:
+      'https://github.com/melekdereje/cinematic-harar-tourism-landing-page',
+    demo: 'https://cinematic-harar-tourism-landing-page.vercel.app/',
   },
 ];
 
@@ -56,18 +57,24 @@ const Projects = () => {
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                 <a
                   href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 bg-white text-black rounded-full hover:bg-gray-200 transition-colors transform hover:scale-110"
                   title="View Code"
                 >
                   <FaGithub size={20} />
                 </a>
-                <a
-                  href={project.demo}
-                  className="p-3 bg-white text-black rounded-full hover:bg-gray-200 transition-colors transform hover:scale-110"
-                  title="Live Demo"
-                >
-                  <FaExternalLinkAlt size={20} />
-                </a>
+                {project.demo && project.demo !== '#' && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white text-black rounded-full hover:bg-gray-200 transition-colors transform hover:scale-110"
+                    title="Live Demo"
+                  >
+                    <FaExternalLinkAlt size={20} />
+                  </a>
+                )}
               </div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
