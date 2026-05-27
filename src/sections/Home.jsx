@@ -70,6 +70,7 @@ const Home = () => {
           <img
             src={profileImg}
             alt="Profile"
+            fetchpriority="high"
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
           />
         </div>
