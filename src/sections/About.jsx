@@ -18,7 +18,7 @@ const About = () => {
     <SectionWrapper id="about" className="py-20 text-center">
       <h2 className="text-4xl font-bold mb-4">Who I Am</h2>
       <p className="text-gray-400 max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
-        I'm Abemelek Dereje, an Information System student at [Haramaya
+        I'm Abemelek Dereje, Information System student at [Haramaya
         University] and a front-end developer and designer passionate about
         crafting clean, intuitive, and responsive digital experiences. I focus
         on turning ideas into seamless interfaces by understanding user needs,
