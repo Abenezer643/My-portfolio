@@ -34,7 +34,7 @@ const projects = [
     image: hararImg,
     github:
       'https://github.com/melekdereje/cinematic-harar-tourism-landing-page',
-    demo: 'https://cinematic-harar-tourism-landing-page.vercel.app/',
+    demo: '#',
   },
 ];
 
