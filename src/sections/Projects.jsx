@@ -4,7 +4,7 @@ import Card from '../components/Card';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import ProjectImg from '../assets/projectPic/library-system.png';
 import ProjectImg2 from '../assets/projectPic/portfolio.png';
-import ProjectImg3 from '../assets/projectPic/Harar-travel-agency.png';
+import hararImg from '../assets/projectPic/Harar-travel-agency.png';
 
 const projects = [
   {
@@ -31,7 +31,7 @@ const projects = [
     description:
       'Mobile-first travel booking application with map integration.',
     tags: ['TypeScript', 'Framer Motion', 'Tailwind CSS'],
-    image: ProjectImg3,
+    image: hararImg,
     github:
       'https://github.com/melekdereje/cinematic-harar-tourism-landing-page',
     demo: 'https://cinematic-harar-tourism-landing-page.vercel.app/',
