@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import { FaGithub, FaBehance, FaFileAlt } from 'react-icons/fa';
-import profileImg from '../assets/profile.jpg';
+import profileImg from '../assets/profile.webp';
 import resumePdf from '../assets/Resume.pdf';
 
 const Home = () => {

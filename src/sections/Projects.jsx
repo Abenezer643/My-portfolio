@@ -2,9 +2,9 @@ import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import Card from '../components/Card';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import ProjectImg from '../assets/projectPic/library-system.png';
-import ProjectImg2 from '../assets/projectPic/portfolio.png';
-import hararImg from '../assets/projectPic/Harar.png';
+import ProjectImg from '../assets/projectPic/library-system.webp';
+import ProjectImg2 from '../assets/projectPic/portfolio.webp';
+import hararImg from '../assets/projectPic/Harar.webp';
 
 const projects = [
   {
