@@ -47,20 +47,22 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12 bg-white/5 border border-white/10 p-8 rounded-3xl">
+      <div className="flex flex-col lg:flex-row gap-12 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 p-8 rounded-3xl shadow-sm dark:shadow-none">
         {/* Contact Info */}
         <div className="flex-1 space-y-8">
-          <h3 className="text-2xl font-bold">Contact Information</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+            Contact Information
+          </h3>
 
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white">
+            <div className="w-12 h-12 bg-gray-100 dark:bg-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white">
               <FaEnvelope size={20} />
             </div>
             <div>
               <p className="text-sm text-gray-400">Email</p>
               <a
                 href="mailto:Abemelekdereje@gmail.com"
-                className="text-lg hover:text-gray-300 transition-colors"
+                className="text-lg text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
                 Abemelekdereje@gmail.com
               </a>
@@ -68,14 +70,14 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white">
+            <div className="w-12 h-12 bg-gray-100 dark:bg-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white">
               <FaPhoneAlt size={20} />
             </div>
             <div>
               <p className="text-sm text-gray-400">Phone</p>
               <a
                 href="tel:+251979857886"
-                className="text-lg hover:text-gray-300 transition-colors"
+                className="text-lg text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
                 +251 979 857 886
               </a>
@@ -83,12 +85,14 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white">
+            <div className="w-12 h-12 bg-gray-100 dark:bg-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white">
               <FaMapMarkerAlt size={20} />
             </div>
             <div>
               <p className="text-sm text-gray-400">Location</p>
-              <p className="text-lg block">Addis Ababa, Ethiopia</p>
+              <p className="text-lg block text-gray-900 dark:text-white">
+                Addis Ababa, Ethiopia
+              </p>
             </div>
           </div>
         </div>
@@ -98,7 +102,10 @@ const Contact = () => {
           <form className="space-y-6" onSubmit={onSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm text-gray-400">
+                <label
+                  htmlFor="name"
+                  className="text-sm text-gray-600 dark:text-gray-400"
+                >
                   Your Name
                 </label>
                 <input
@@ -106,12 +113,15 @@ const Contact = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
+                  className="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-gray-400 dark:focus:border-white/30 transition-colors placeholder:text-gray-400"
                   placeholder="John Doe"
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm text-gray-400">
+                <label
+                  htmlFor="email"
+                  className="text-sm text-gray-600 dark:text-gray-400"
+                >
                   Your Email
                 </label>
                 <input
@@ -119,14 +129,17 @@ const Contact = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
+                  className="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-gray-400 dark:focus:border-white/30 transition-colors placeholder:text-gray-400"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm text-gray-400">
+              <label
+                htmlFor="message"
+                className="text-sm text-gray-600 dark:text-gray-400"
+              >
                 Message
               </label>
               <textarea
@@ -134,7 +147,7 @@ const Contact = () => {
                 name="message"
                 required
                 rows="5"
-                className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors resize-none"
+                className="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-gray-400 dark:focus:border-white/30 transition-colors resize-none placeholder:text-gray-400"
                 placeholder="Let's build something amazing together..."
               ></textarea>
             </div>
@@ -142,12 +155,14 @@ const Contact = () => {
             <div className="flex items-center gap-4">
               <button
                 type="submit"
-                className="w-full md:w-auto bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-white/10"
+                className="w-full md:w-auto bg-gray-900 text-white dark:bg-white dark:text-black px-8 py-3 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-black/10 dark:shadow-white/10"
               >
                 Send Message
               </button>
               {result && (
-                <span className="text-sm text-gray-300">{result}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-300">
+                  {result}
+                </span>
               )}
             </div>
           </form>

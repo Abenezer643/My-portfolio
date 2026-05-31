@@ -31,12 +31,14 @@ const About = () => {
         {approaches.map((item, index) => (
           <div
             key={index}
-            className="bg-[#1f1f1f] border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/5 transition-colors"
+            className="bg-white dark:bg-[#1f1f1f] border border-gray-200 dark:border-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-sm dark:shadow-none"
           >
-            <div className="bg-white text-black font-bold rounded p-2 mb-4 text-sm w-10 h-10 flex items-center justify-center">
+            <div className="bg-gray-900 text-white dark:bg-white dark:text-black font-bold rounded p-2 mb-4 text-sm w-10 h-10 flex items-center justify-center">
               {item.number}
             </div>
-            <h4 className="text-lg font-medium text-gray-200">{item.title}</h4>
+            <h4 className="text-lg font-medium text-gray-900 dark:text-gray-200">
+              {item.title}
+            </h4>
           </div>
         ))}
       </div>
@@ -44,7 +46,7 @@ const About = () => {
       <div className="flex flex-wrap justify-center gap-12 md:gap-24">
         {stats.map((stat, index) => (
           <div key={index} className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">
+            <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
               {stat.value}
             </div>
             <div className="text-sm text-gray-400 uppercase tracking-wider">

@@ -35,13 +35,13 @@ const Services = () => {
         {services.map((service, index) => (
           <Card
             key={index}
-            className="flex flex-col h-full justify-between hover:bg-white/5"
+            className="flex flex-col h-full justify-between hover:bg-gray-50 dark:hover:bg-white/5"
           >
             <div>
-              <h3 className="text-xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+              <h3 className="text-xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 dark:from-white to-gray-500 dark:to-gray-400">
                 {service.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -49,7 +49,7 @@ const Services = () => {
               {service.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs bg-white/5 border border-white/10 px-3 py-1 rounded-full text-gray-300"
+                  className="text-xs bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 px-3 py-1 rounded-full text-gray-700 dark:text-gray-300"
                 >
                   {tag}
                 </span>

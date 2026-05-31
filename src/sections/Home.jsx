@@ -2,7 +2,6 @@ import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import { FaGithub, FaBehance, FaFileAlt } from 'react-icons/fa';
 import profileImg from '../assets/profile.webp';
-import resumePdf from '../assets/Resume.pdf';
 
 const Home = () => {
   return (
@@ -14,9 +13,9 @@ const Home = () => {
         <p className="text-gray-400 text-lg uppercase tracking-wide">
           I am Abemelek
         </p>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white">
           A Creative <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 dark:from-white to-gray-500">
             Developer
           </span>{' '}
           & <br />
@@ -30,20 +29,20 @@ const Home = () => {
         <div className="flex flex-col md:flex-row gap-6 items-center justify-center md:justify-start">
           <a
             href="#projects"
-            className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-white/10"
+            className="bg-gray-900 text-white dark:bg-white dark:text-black px-8 py-3 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-black/10 dark:shadow-white/10"
           >
             View My Work
           </a>
           <a
-            href={resumePdf}
+            href="https://drive.google.com/file/d/1mHKa0i6mtk6E-DRNp5IywTLwrLYHQWCj/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 hover:border-white/30 transition-all text-white"
+            className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 hover:border-gray-400 dark:hover:border-white/30 transition-all text-gray-900 dark:text-white"
           >
             <FaFileAlt />
             <span>Resume</span>
           </a>
-          <div className="flex gap-6 text-2xl text-white">
+          <div className="flex gap-6 text-2xl text-gray-900 dark:text-white">
             <a
               href="https://www.behance.net/mlkdrj"
               target="_blank"

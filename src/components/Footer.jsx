@@ -8,14 +8,14 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f0f0f] border-t border-white/10 py-12 mt-20">
+    <footer className="bg-gray-50 dark:bg-[#0f0f0f] border-t border-gray-200 dark:border-white/10 py-12 mt-20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <div className="flex justify-center gap-8 mb-8">
           <a
             href="https://github.com/melekdereje"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
+            className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
             <FaGithub />
           </a>
@@ -23,7 +23,7 @@ const Footer = () => {
             href="https://www.behance.net/mlkdrj"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
+            className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
             <FaBehance />
           </a>
@@ -31,7 +31,7 @@ const Footer = () => {
             href="https://t.me/Abe_Melek"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
+            className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
             <FaTelegramPlane />
           </a>
@@ -39,12 +39,12 @@ const Footer = () => {
             href="https://www.instagram.com/melekdereje"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 text-2xl"
+            className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
           >
             <FaInstagram />
           </a>
         </div>
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-500 dark:text-gray-500 text-sm">
           &copy; {new Date().getFullYear()} Abemelek Design. All rights
           reserved.
         </p>

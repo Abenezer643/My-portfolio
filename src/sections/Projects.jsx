@@ -46,7 +46,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <Card
             key={index}
-            className="flex flex-col h-full !p-0 overflow-hidden group hover:border-white/30"
+            className="flex flex-col h-full !p-0 overflow-hidden group hover:border-gray-300 dark:hover:border-white/30"
           >
             <div className="relative h-48 overflow-hidden">
               <img
@@ -79,17 +79,17 @@ const Projects = () => {
               </div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-black dark:group-hover:text-white transition-colors">
                 {project.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-4 flex-grow line-clamp-3">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow line-clamp-3">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded text-gray-300"
+                    className="text-xs bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 px-2 py-1 rounded text-gray-700 dark:text-gray-300"
                   >
                     {tag}
                   </span>

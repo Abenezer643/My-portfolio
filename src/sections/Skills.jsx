@@ -35,7 +35,7 @@ const Skills = () => {
               {skill.items.map((item) => (
                 <span
                   key={item}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 hover:border-white/30 transition-all cursor-default"
+                  className="px-4 py-2 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/10 hover:border-gray-300 dark:hover:border-white/30 transition-all cursor-default"
                 >
                   {item}
                 </span>
