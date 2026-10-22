@@ -4,13 +4,30 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const [result, setResult] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    setIsSubmitting(true);
     setResult('Sending...');
+
     const formData = new FormData(event.target);
 
-    formData.append('access_key', 'fb4ef69f-150c-40e6-8ca1-6a606f37500c');
+    // Add access key from environment variable
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      setResult('Configuration error. Please contact the administrator.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    formData.append('access_key', accessKey);
+
+    // Add submission date/time
+    formData.append('subject', `New Portfolio Contact Message from ${formData.get('name')}`);
+    formData.append('from_name', formData.get('name'));
+    formData.append('reply_to', formData.get('email'));
+    formData.append('date', new Date().toLocaleString());
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -21,20 +38,23 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult('Message Sent Successfully!');
+        setResult('Your message has been sent successfully. I\'ll get back to you soon.');
         event.target.reset();
+
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setResult('');
+        }, 5000);
       } else {
         console.log('Error', data);
-        setResult(data.message);
+        setResult(data.message || 'Failed to send message. Please try again.');
       }
     } catch (error) {
+      console.error('Submission error:', error);
       setResult('An error occurred. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
     }
-
-    // Clear message after 3 seconds
-    setTimeout(() => {
-      setResult('');
-    }, 3000);
   };
 
   return (
@@ -61,10 +81,10 @@ const Contact = () => {
             <div>
               <p className="text-sm text-gray-400">Email</p>
               <a
-                href="mailto:Abemelekdereje@gmail.com"
+                href="mailto:abenezersolomon643@gmail.com"
                 className="text-lg text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
-                Abemelekdereje@gmail.com
+                abenezersolomon643@gmail.com
               </a>
             </div>
           </div>
@@ -76,10 +96,10 @@ const Contact = () => {
             <div>
               <p className="text-sm text-gray-400">Phone</p>
               <a
-                href="tel:+251979857886"
+                href="tel:+251901535629"
                 className="text-lg text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
-                +251 979 857 886
+                +251 901 535 629
               </a>
             </div>
           </div>
@@ -152,15 +172,26 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
               <button
                 type="submit"
-                className="w-full md:w-auto bg-gray-900 text-white dark:bg-white dark:text-black px-8 py-3 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-black/10 dark:shadow-white/10"
+                disabled={isSubmitting}
+                className="w-full md:w-auto bg-gray-900 text-white dark:bg-white dark:text-black px-8 py-3 rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-black/10 dark:shadow-white/10 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </button>
               {result && (
-                <span className="text-sm text-gray-600 dark:text-gray-300">
+                <span className={`text-sm ${result.includes('error') || result.includes('failed') || result.includes('Configuration') ? 'text-red-500' : 'text-green-500 dark:text-green-400'}`}>
                   {result}
                 </span>
               )}

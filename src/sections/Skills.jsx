@@ -5,15 +5,27 @@ import Card from '../components/Card';
 const skills = [
   {
     category: 'Core Skills',
-    items: ['UI/UX Design', 'Responsive Web Design', 'Component-Based Design'],
+    items: ['Problem Solving', 'UI/UX Design', 'Responsive Design', 'Component-Based Architecture', 'API Integration'],
   },
   {
-    category: 'Frontend Tech',
-    items: ['HTML', 'CSS', 'Tailwind CSS', 'JS', 'ES6', 'React'],
+    category: 'Frontend Development',
+    items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS'],
   },
   {
-    category: 'Tools & Interaction',
-    items: ['Figma', 'Photoshop', 'Illustrator', 'Git & GitHub'],
+    category: 'Backend Development',
+    items: ['Python', 'Django', 'PHP', 'Node.js', 'Express.js', 'REST APIs'],
+  },
+  {
+    category: 'Mobile Development',
+    items: ['Flutter', 'Dart', 'Reusable Widgets', 'Responsive Mobile UI'],
+  },
+  {
+    category: 'Databases',
+    items: ['MongoDB', 'MySQL'],
+  },
+  {
+    category: 'Design & Development Tools',
+    items: ['Figma', 'Photoshop', 'Illustrator', 'Git', 'GitHub', 'VS Code'],
   },
 ];
 
@@ -22,7 +34,7 @@ const Skills = () => {
     <SectionWrapper id="skills" className="py-20">
       <h2 className="text-4xl font-bold text-center mb-4">Skills</h2>
       <p className="text-gray-400 text-center mb-12">
-        Crafting seamless UI/UX and clean code
+        Technologies I use to build modern digital experiences.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((skill, index) => (

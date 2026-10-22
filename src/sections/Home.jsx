@@ -1,7 +1,8 @@
 import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
-import { FaGithub, FaBehance, FaFileAlt } from 'react-icons/fa';
-import profileImg from '../assets/profile.webp';
+import { FaGithub, FaTelegramPlane, FaInstagram, FaFileAlt } from 'react-icons/fa';
+import profileImg from '../assets/profile.jpg';
+import resumePdf from '../assets/Resume.pdf';
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
     >
       <div className="flex-1 space-y-6 md:space-y-8 text-center md:text-left">
         <p className="text-gray-400 text-lg uppercase tracking-wide">
-          I am Abemelek
+          I am Abenezer
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white">
           A Creative <br />
@@ -34,7 +35,7 @@ const Home = () => {
             View My Work
           </a>
           <a
-            href="https://drive.google.com/file/d/1mHKa0i6mtk6E-DRNp5IywTLwrLYHQWCj/view?usp=sharing"
+            href={resumePdf}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 hover:border-gray-400 dark:hover:border-white/30 transition-all text-gray-900 dark:text-white"
@@ -44,15 +45,25 @@ const Home = () => {
           </a>
           <div className="flex gap-6 text-2xl text-gray-900 dark:text-white">
             <a
-              href="https://www.behance.net/mlkdrj"
+              href="https://t.me/abnezer12"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400 transition-colors transform hover:scale-110"
+              title="@abnezer12"
             >
-              <FaBehance />
+              <FaTelegramPlane />
             </a>
             <a
-              href="https://github.com/melekdereje"
+              href="https://www.instagram.com/abu_sol.1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400 transition-colors transform hover:scale-110"
+              title="abu_sol.1"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://github.com/Abenezer643"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400 transition-colors transform hover:scale-110"

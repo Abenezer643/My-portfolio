@@ -4,22 +4,32 @@ import Card from '../components/Card';
 
 const services = [
   {
-    title: 'Design Engineering ',
+    title: 'UI Design & Responsive Interfaces',
+    subtitle: 'Design Engineering',
     description:
-      'Translating design files into pixel-perfect, interactive code with attention to detail and performance.',
-    tags: ['Modern layouts', 'Responsive design'],
+      'Creating clean, intuitive, and responsive interfaces that turn UI/UX ideas into engaging digital experiences across mobile, tablet, and desktop devices.',
+    tags: ['Modern Layouts', 'Responsive Design', 'Interactive UI'],
   },
   {
-    title: 'Scalable Frontend',
+    title: 'Full-Stack Web Development',
+    subtitle: 'Frontend & Backend',
     description:
-      'Building component-based architectures that grow with your product, ensuring maintainability and consistency.',
-    tags: ['Component design', 'State management'],
+      'Building functional web applications with maintainable frontend components, reliable backend logic, API integrations, and well-structured data management.',
+    tags: ['Frontend Development', 'Backend APIs', 'Database Integration'],
   },
   {
-    title: 'Performance & Responsiveness',
+    title: 'Mobile App Development',
+    subtitle: 'Flutter Development',
     description:
-      'Ensuring silky smooth 60fps animations and lightning-fast load times.',
-    tags: ['Speed optimization', 'Asset efficiency'],
+      'Developing cross-platform mobile applications with Flutter, focusing on reusable widgets, intuitive navigation, practical functionality, and consistent user experiences.',
+    tags: ['Flutter', 'Dart', 'Reusable Widgets'],
+  },
+  {
+    title: 'Performance & Code Quality',
+    subtitle: 'Optimization & Maintainability',
+    description:
+      'Improving application performance through efficient code, reusable architecture, debugging, and optimization for a smoother and more reliable user experience.',
+    tags: ['Code Optimization', 'Debugging', 'Maintainable Code'],
   },
 ];
 
@@ -28,16 +38,17 @@ const Services = () => {
     <SectionWrapper id="services" className="py-20">
       <h2 className="text-4xl font-bold text-center mb-4">What I Do</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-        Designing clean scalable responsive websites
+        I build responsive web applications, cross-platform mobile apps, and intuitive digital experiences through thoughtful design and clean, maintainable code.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service, index) => (
           <Card
             key={index}
             className="flex flex-col h-full justify-between hover:bg-gray-50 dark:hover:bg-white/5"
           >
             <div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wider">{service.subtitle}</p>
               <h3 className="text-xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 dark:from-white to-gray-500 dark:to-gray-400">
                 {service.title}
               </h3>

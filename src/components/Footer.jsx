@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   FaGithub,
-  FaBehance,
   FaTelegramPlane,
   FaInstagram,
 } from 'react-icons/fa';
@@ -12,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 text-center">
         <div className="flex justify-center gap-8 mb-8">
           <a
-            href="https://github.com/melekdereje"
+            href="https://github.com/Abenezer643"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
@@ -20,32 +19,26 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.behance.net/mlkdrj"
+            href="https://t.me/abnezer12"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
-          >
-            <FaBehance />
-          </a>
-          <a
-            href="https://t.me/Abe_Melek"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
+            title="@abnezer12"
           >
             <FaTelegramPlane />
           </a>
           <a
-            href="https://www.instagram.com/melekdereje"
+            href="https://www.instagram.com/abu_sol.1/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110 text-2xl"
+            title="abu_sol.1"
           >
             <FaInstagram />
           </a>
         </div>
         <p className="text-gray-500 dark:text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Abemelek Design. All rights
+          &copy; {new Date().getFullYear()} Abenezer Design. All rights
           reserved.
         </p>
       </div>

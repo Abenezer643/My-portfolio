@@ -45,9 +45,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <img
-              src="/logo.svg"
+              src="/logo.jpg"
               alt="logo"
-              className="h-10 w-10 rounded-full dark:invert-0 invert"
+              className="h-10 w-10 rounded-full"
             />
           </div>
           <div className="hidden md:block">

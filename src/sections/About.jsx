@@ -17,14 +17,7 @@ const About = () => {
   return (
     <SectionWrapper id="about" className="py-20 text-center">
       <h2 className="text-4xl font-bold mb-4">Who I Am</h2>
-      <p className="text-gray-400 max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
-        I'm Abemelek Dereje, Information System student at [Haramaya
-        University] and a front-end developer and designer passionate about
-        crafting clean, intuitive, and responsive digital experiences. I focus
-        on turning ideas into seamless interfaces by understanding user needs,
-        designing thoughtful UI layouts, and ensuring smooth interactions across
-        devices.
-      </p>
+      <p className="text-gray-400 max-w-3xl mx-auto mb-16 text-lg leading-relaxed">I'm Abenezer Solomon, an Information Science graduate from Haramaya University and a full-stack web and mobile app developer passionate about building practical, user-friendly digital solutions. I work across frontend and backend development, mobile app development with Flutter, and UI design, turning ideas into responsive, functional, and visually appealing applications. With experience in technologies such as React, Next.js, TypeScript, JavaScript, Python, Django, and Flutter, I enjoy solving problems, learning new technologies, and creating digital experiences that combine clean design with reliable functionality.</p>
 
       <h3 className="text-2xl font-bold mb-8">My Approach</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">

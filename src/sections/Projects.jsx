@@ -2,38 +2,37 @@ import React from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import Card from '../components/Card';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import ProjectImg from '../assets/projectPic/library-system.webp';
-import ProjectImg2 from '../assets/projectPic/portfolio.webp';
-import hararImg from '../assets/projectPic/Harar.webp';
+import ProjectImg from '../assets/projectPic/Flutter User List App.jpg';
+import ProjectImg2 from '../assets/projectPic/portfolio-D9AEo6R0.jpg';
+import hararImg from '../assets/projectPic/TibebStore Ethiopian Marketplace.jpg';
 
 const projects = [
   {
     title: 'Portfolio Website',
     description:
-      'A modern dark-themed portfolio website built with React and Tailwind CSS.',
-    tags: ['React', 'Tailwind', 'Framer Motion'],
+      'A modern, dark-themed portfolio website built with React and Tailwind CSS to showcase my skills, projects, and experience through a clean and responsive design.',
+    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
     image: ProjectImg2,
     github:
       'https://github.com/melekdereje/Arik-simplified-dark-themed-react-portfolio',
     demo: '#',
   },
   {
-    title: 'Library Management System',
+    title: 'User List App',
     description:
-      'A comprehensive dashboard for managing books, members, and transactions.',
-    tags: ['JavaScript', 'PHP', 'MYSQL'],
+      'A Flutter-based mobile application developed during my software engineering experience at LT Software Engineering PLC. The app focuses on managing and viewing user information through an intuitive interface and smooth navigation.',
+    tags: ['Flutter', 'Dart'],
     image: ProjectImg,
-    github: 'https://github.com/melekdereje/library-system.git',
+    github: '#',
     demo: '#',
   },
   {
-    title: 'Harar Travel Agency Web',
+    title: 'TibebStore',
     description:
-      'Mobile-first travel booking application with map integration.',
-    tags: ['TypeScript', 'Framer Motion', 'Tailwind CSS'],
+      'A multi-tenant e-commerce platform designed to connect Ethiopian artisans with customers through a digital marketplace for handmade, custom, and culturally inspired products. Each vendor can manage a separate storefront, product catalog, branding, and customer base.',
+    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Payload CMS', 'MongoDB', 'Stripe'],
     image: hararImg,
-    github:
-      'https://github.com/melekdereje/cinematic-harar-tourism-landing-page',
+    github: '#',
     demo: '#',
   },
 ];
@@ -41,7 +40,10 @@ const projects = [
 const Projects = () => {
   return (
     <SectionWrapper id="projects" className="py-20">
-      <h2 className="text-4xl font-bold text-center mb-12">Selected Work</h2>
+      <h2 className="text-4xl font-bold text-center mb-4">Selected Work</h2>
+      <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+        A selection of projects showcasing my skills in web development, mobile app development, and building practical digital solutions.
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <Card
